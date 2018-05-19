@@ -1,0 +1,26 @@
+Reference for all the launch file changes
+
+------------------------husky----------------------- 
+
+husky_control - Husky control package
+control -> control_modified.launch
+added in the imu launch node. package-um6, type-um6_driver 
+launches default for enu configuration
+
+husky_description - Package containing the description of the robot
+description.launch -> description_modified.launch
+updated the robot description parameter to replicate the updated urdf with velodyne
+Also, commented out the robot_state_publisher node. (****Maybe, add it in again.)
+
+
+---------------------husky_simulator-------------------------
+
+husky_gazebo - Husky custom simulation package for gazebo
+husky_empty_world.launch -> huskywithvelo_empty_world.launch
+
+
+
+
+ 
+
+

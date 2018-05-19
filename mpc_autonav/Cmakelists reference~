@@ -1,0 +1,53 @@
+CmakeLists.txt reference
+
+##Version Required
+cmake_minimum_required(VERSION 2.8.3)
+
+##Project Name
+project(mpc_autonav)
+
+##Declare required packages
+##Declare catkin first followed by the required catkin components
+
+find_package(catkin REQUIRED COMPONENTS roscpp ... etc)
+
+##For Eigen, PCL and OpenCV
+##Declare Eigen, PCL and OpenCV as required packages
+find_package(Eigen REQUIRED)
+find_package(PCL REQUIRED)
+find_package(OpenCV REQUIRED)
+
+##Include directories
+## (Include all paths to the headers and include catkin, Eigen, PCL and OpenCV libraries by function variables)
+include_directories(
+  include /home/arunabh/MPC/MPC_CPP_Development/
+  include /home/arunabh/CodeBase/
+  include /home/arunabh/CodeBase/Utilities/
+  include /home/arunabh/CodeBase/Utilities/NumericalIntegration/
+  include /home/arunabh/CodeBase/Utilities/Math/
+  ${catkin_INCLUDE_DIRS}
+  ${Eigen_INCLUDE_DIRS}
+  ${PCL_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}  
+)
+
+
+## Declare all C++ executables 
+## (Declare all the cpp files for every class that are required to compile the code)
+add_executable(mpc_autonav src/mpc_autonav.cpp
+/home/arunabh/MPC/MPC_CPP_Development/husky_collision_constraint.cpp
+/home/arunabh/MPC/MPC_CPP_Development/husky_system.cpp
+/home/arunabh/CodeBase/Utilities/Timer.cpp
+/home/arunabh/CodeBase/Utilities/NumericalIntegration/integrationmethod.cpp
+/home/arunabh/CodeBase/Utilities/NumericalIntegration/ivp_solver.cpp
+/home/arunabh/CodeBase/Utilities/Math/PseudoInverse.cpp
+/home/arunabh/MPC/MPC_CPP_Development/superellipsoid_keepout.cpp
+/home/arunabh/CodeBase/Utilities/precisionCalendar.cpp
+)
+
+## Link Libraries
+## Link libraries to your project that are required to make the project run
+target_link_libraries(mpc_autonav ${catkin_LIBRARIES} ${OpenCV_LIBS})
+
+
+

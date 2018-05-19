@@ -1,0 +1,54 @@
+-------------------------INSTRUCTIONS TO NAVIGATE THROUGH GIT------------------------------
+
+**These are the most basic commands that are needed to navigate through the repo.
+**Please double check them once before using them. 
+
+https://git-scm.com/doc
+**For a more verbose documentation please visit the git online documentation via the link above.
+
+
+
+$ git clone gogs@gogs.mines.edu:M3Robotics/repo.git
+repo - GeoBot, MPC, CodeBase, FlyingUnderground
+- Clones the repo you want into your home/username/ folder
+
+$ git status
+- Checks the status of your repo
+
+$ git branch
+- Checks which branch you are in currently
+
+$ git checkout ($branch-name)
+- Switches to the specified branch name
+
+$ git add file/path/folderToAdd*
+- adds the specified folder 
+
+$ git add /file/path/file.file
+- adds the specified file to changes
+
+$ git add -u
+- adds all the updates (I use it to add deleted file updates)
+
+$ git commit -m " Whatever you have changed"
+- Adds the comment for the commit
+
+***The add command should always be followed up by the commit for it to make sense.
+***Always good practice to individually commit files so that you can add the commit along with it.
+
+$ git push [remote] [branch-name]
+remote - origin (default remote for our repo)
+branch-name - Self-explanatory
+- pushes the committed changes to the online repo. Can only be done if all the changes are committed and tracked.
+
+$ git rm file/path/file.file
+- removes the specified file from the local copy
+
+$ git rm -r file/path*
+- recursive removal for all the files in the folder
+
+
+
+
+
+
